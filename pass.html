@@ -34,14 +34,14 @@ function processPhrase()
     { 
         correct++; 
         alert("Access allowed");
+        document.getElementById("result").innerHTML = "The value of correct is: " + correct;
     } 
     else 
     {
         wrong++;
         alert("Access denied");
-      
+        document.getElementById("result").innerHTML = "The value of wrong is: " + wrong;
     }
-    out.innerHTML = " correct count: " + correct + " wrong count: " +wrong 
 }
 </script>  
 
