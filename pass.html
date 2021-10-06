@@ -37,9 +37,16 @@
     let currentImage = 1;
     var correct = 0;
     var wrong = 0;
+    let counterWrong= 0;
+    
     function processPhrase()
     { 
-        
+        if (counterWrong == 3)
+        {
+            lockAccount();
+        }
+        else
+        {
         console.log("Getting form values")
         secretPhrase = document.getElementById("form1_secretPhrase").value
         checkPhrase = document.getElementById("form1_checkPhrase").value 
@@ -52,10 +59,16 @@
         } 
         else 
         {
+            counterWrong++;
             wrong++;
             alert("Access denied");
             document.getElementById("result").innerHTML = "The value of wrong is: " + wrong;
         }
+        }
+    }
+    function lockAccount()
+    {
+        alert("account locked");
     }
     function newImage(img) 
     {
