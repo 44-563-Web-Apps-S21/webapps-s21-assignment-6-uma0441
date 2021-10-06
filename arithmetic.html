@@ -35,11 +35,10 @@
     <label for="rg1_divide">/</label>
     </br>
 </form>
-<p id="arithmetic">This text will be replaced </p>
+<p id="arithmetic">Result Displayed Here</p>
 </div>
 
 <script> 
-
 function powers ()
 {
 console.log("Getting form values") 
@@ -67,25 +66,25 @@ function processRadio()
     {
         result = 0;
         result = (Number)(first) + (Number)(second);
-        document.getElementById("arithmetic").innerHTML = "Sum of "+first + " and "+ second + " = " +result;
+        document.getElementById("arithmetic").innerHTML = "Sum of " + first + " and "+ second + " = " +result;
     }
     if (minus) 
     {
         result = 0;
         result = (Number)(first) - (Number)(second);
-        document.getElementById("arithmetic").innerHTML =  "Difference of "+first + " and "+ second + " = " +result;
+        document.getElementById("arithmetic").innerHTML =  "Difference of " + first + " and "+ second + " = " +result;
     }   
     if (times) 
     {
         result = 0;
         result = (Number)(first) * (Number)(second);
-        document.getElementById("arithmetic").innerHTML = "times "+first + " and "+ second + " = " + result;
+        document.getElementById("arithmetic").innerHTML = "times " + first + " and "+ second + " = " +result;
     }
     if (divide) 
     {
         result = 0;
         result = (Number)(first) / (Number)(second);
-        document.getElementById("arithmetic").innerHTML =  "By of "+first + " and "+ second + " = " +result;
+        document.getElementById("arithmetic").innerHTML =  "By of " + first + " and "+ second + " = " +result;
     }
 }
 </script>
