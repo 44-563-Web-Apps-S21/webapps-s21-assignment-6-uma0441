@@ -54,6 +54,7 @@
         if(secretPhrase == checkPhrase)
         { 
             correct++; 
+            counterWrong= 0;
             alert("Access allowed");
             document.getElementById("result").innerHTML = "The value of correct is: " + correct;
         } 
