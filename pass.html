@@ -6,7 +6,7 @@
 <body>
 
 <h2>Pass phrase by Manikanta Vasana</h2>
-<form>
+<form class="form-group">
     <label for = "form1_secretPhrase">Enter the secret phrase </label>
     <input type ="password" id = "form1_secretPhrase" name = "form1_secretPhrase" min = 10 max = 50 step = 2 value = "Let me in"> <br>
 
@@ -19,31 +19,51 @@
 
 <p id = "result">Result will be displayed</p>
 
+
+<div class="container">
+    <img src="SaarloosWolfdog.jpg" id="image" class="img-fluid" alt="Saarloos Wolfdog" height="200" width="200" onclick=newImage()>
+</div>
 <script> 
-var correct = 0;
-var wrong = 0;
-function processPhrase()
-{ 
-    
-    console.log("Getting form values")
-    secretPhrase = document.getElementById("form1_secretPhrase").value
-    checkPhrase = document.getElementById("form1_checkPhrase").value 
-    out = document.getElementById("result")
-    if(secretPhrase == checkPhrase)
+    let currentImage = 1;
+    var correct = 0;
+    var wrong = 0;
+    function processPhrase()
     { 
-        correct++; 
-        alert("Access allowed");
-        document.getElementById("result").innerHTML = "The value of correct is: " + correct;
-    } 
-    else 
-    {
-        wrong++;
-        alert("Access denied");
-        document.getElementById("result").innerHTML = "The value of wrong is: " + wrong;
+        
+        console.log("Getting form values")
+        secretPhrase = document.getElementById("form1_secretPhrase").value
+        checkPhrase = document.getElementById("form1_checkPhrase").value 
+        out = document.getElementById("result")
+        if(secretPhrase == checkPhrase)
+        { 
+            correct++; 
+            alert("Access allowed");
+            document.getElementById("result").innerHTML = "The value of correct is: " + correct;
+        } 
+        else 
+        {
+            wrong++;
+            alert("Access denied");
+            document.getElementById("result").innerHTML = "The value of wrong is: " + wrong;
+        }
     }
-}
-</script>  
-
-
+    function newImage(img) 
+    {
+            switch (currentImage)
+            {
+                case 1:
+                    document.getElementById("image").src ="SaarloosWolfdog.jpg";
+                    currentImage++;
+                    break;
+                case 2: document.getElementById("image").src ="nene.jpg";
+                    currentImage++;
+                    break;
+                case 3: document.getElementById("image").src ="v.jpg";
+                    currentImage = 1;
+                    break;
+                default: currentImage = 1;
+            }
+    }
+    </script>  
 </body>
 </html> 
